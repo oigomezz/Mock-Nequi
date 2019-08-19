@@ -1,15 +1,25 @@
 # Mock-Nequi
 
+Esta aplicacion fue desarrollada como un sistema basado en consola que permite:
 
-Integrantes 
-Oscar Gomez
-Yonatan Cuervo
+- Registrar nuevos usuarios con su nombre, email y password.
+- Consultar el saldo de disponible en su cuenta.
+- Enviar dinero a otro usuario a través de su email, desde cualquier cuenta de ahorros.
+- Consultar sus últimas N transacciones.
+- Colchon: lugar donde el usuario podra ahorrar dinero.
+- Bolsillos: subcuentas que el usuario podra usar para diferentes propositos.
+- Metas: subcuentas en las que le usuario podra ahorrar dinero para un proposito espesifico.
 
-Usuarios
+Se utiliza la gema https://www.rubydoc.info/gems/mysql2/0.5.2 para conectarse a la base de datos desde ruby.
 
-Usuario con unica cuenta de ahorros
+## Uso
 
-Una cuenta de ahorros con 1 colchon , 0-M bolsillos, 0-M metas
+1. Correr el script database.sql en un servidor Mysql 5.x para crear la base de datos necesaria.
+2. Modificar las propiedades de conexion del servidor Mysql en el archivo connection.rb 
+3. Instalar ruby 2.5.x y correr el programa Mock-Nequi.rb
 
-Disponible = Total en la cuenta - dinero en colchón - dinero en metas - dinero en bolsillos
+Colaboradores
+- Oscar Gomez
+- Yonatan Cuervo
+
 

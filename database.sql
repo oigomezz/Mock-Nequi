@@ -35,8 +35,9 @@ DROP TABLE IF EXISTS `mydb`.`users` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `mail` VARCHAR(60) NOT NULL,
+  `mail` VARCHAR(60) NOT NULL UNIQUE,
   `password` VARCHAR(60) NOT NULL,
+  `user_name` VARCHAR(60) NOT NULL,
   `accounts_id` INT NOT NULL,
   PRIMARY KEY (`id`, `accounts_id`),
   CONSTRAINT `fk_users_accounts`
@@ -94,7 +95,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`goals` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`goals` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `date` DATE NOT NULL,
   `totalAmount` INT NOT NULL,
@@ -113,4 +114,3 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
